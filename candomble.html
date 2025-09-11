@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candomblé - religia niewolników w Brazylii XXI wieku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #d97706, #92400e);
+        z-index: 1000;
+        transition: width 0.1s ease-out;
+      }
+
+      .nav-item {
+        transition: all 0.2s ease;
+      }
+
+      .nav-item:hover {
+        background: rgba(217, 119, 6, 0.1);
+        border-left: 3px solid #d97706;
+      }
+
+      .nav-item.active {
+        background: rgba(217, 119, 6, 0.15);
+        border-left: 3px solid #d97706;
+        font-weight: 600;
+      }
+
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+
+      /* Critical CSS for scroll positioning and footnotes */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        scroll-margin-top: 300px;
+      }
+
+      .footnotes {
+        scroll-margin-top: 300px;
+      }
+
+      .footnotes li:target {
+        background-color: #fef3c7;
+        border-left: 4px solid #d97706;
+      }
+
+      .footnotes li {
+        scroll-margin-top: 300px;
+      }
+
+      a[id^="footnote-ref-"] {
+        scroll-margin-top: 300px;
+      }
+
+      /* Highlighting for direct parent elements containing footnote references */
+      #articlesContainer > *:has(a[id^="footnote-ref-"]:target),
+      #articlesContainer p:has(a[id^="footnote-ref-"]:target) {
+        padding-left: 1rem;
+        animation: footnote-highlight 3s ease-in-out forwards;
+      }
+
+      /* Fallback for browsers that don't support :has() */
+      #articlesContainer > *.highlight-footnote-ref,
+      #articlesContainer p.highlight-footnote-ref {
+        padding-left: 1rem;
+        animation: footnote-highlight 3s ease-in-out forwards;
+      }
+
+      /* Simple animation for footnote reference highlighting */
+      @keyframes footnote-highlight {
+        0% {
+          background-color: transparent;
+          border-left: 4px solid transparent;
+        }
+        20% {
+          background-color: #fef3c7;
+          border-left: 4px solid #d97706;
+        }
+        80% {
+          background-color: #fef3c7;
+          border-left: 4px solid #d97706;
+        }
+        100% {
+          background-color: transparent;
+          border-left: 4px solid transparent;
+        }
+      }
+
+      /* List styling */
+      #articlesContainer ul {
+        list-style-type: disc;
+      }
+      #articlesContainer ol {
+        list-style-type: decimal;
+      }
+      #articlesContainer ul ul {
+        list-style-type: circle;
+      }
+      #articlesContainer ul ul ul {
+        list-style-type: square;
+      }
+      #articlesContainer ol ol {
+        list-style-type: lower-alpha;
+      }
+      #articlesContainer ol ol ol {
+        list-style-type: lower-roman;
+      }
+
+      .content-area {
+        min-height: calc(100vh - 180px);
+      }
+
+      .chapter-number {
+        color: #d97706;
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+
+      .reading-time {
+        color: #92400e;
+        font-size: 0.75rem;
+      }
+
+      .article-content {
+        line-height: 1.8;
+        color: #374151;
+      }
+
+      .article-content h1,
+      .article-content h2,
+      .article-content h3 {
+        color: #92400e;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .article-content p {
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body class="bg-stone-50 font-serif">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-stone-200 sticky top-0 z-50">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-book text-white text-lg"></i>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-stone-800">Candomblé</h1>
+              <p class="text-xs text-stone-600">religia niewolników w Brazylii XXI wieku</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Articles Section (75%) -->
+        <div class="flex-1 lg:w-3/4">
+          <!-- Page Title -->
+          <div class="mb-8">
+            <h1 class="text-3xl font-bold text-stone-800 mb-2">Candomblé</h1>
+            <p class="text-stone-600">
+              Niniejsza praca stanowi kompleksowe studium religii candomblé: jej rytuałów, wierzeń i znaczenia
+              kulturowego we współczesnej Brazylii.
+            </p>
+            <p class="text-stone-600 mb-4">Jest to zredagowana wersja pracy magisterskiej Piotra Brycha z 2014 roku.</p>
+          </div>
+
+          <!-- Main Content Area -->
+          <div class="space-y-6" id="articlesContainer">
+            <!-- Content will be injected here by build script -->
+          </div>
+        </div>
+
+        <!-- Navigation Section (25%) -->
+        <aside class="lg:w-1/4">
+          <div class="sticky top-24">
+            <img src="./images/Xire.png" alt="Xirê de Candomblé" class="w-[250px] h-auto mb-6 mx-auto" />
+            <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6">
+              <h3 class="text-lg font-semibold text-stone-800 mb-4">Spis treści</h3>
+              <nav class="space-y-2">
+                <!-- Table of Contents will be generated here by build script -->
+              </nav>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 mt-16">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="text-center">
+          <p class="text-stone-600 text-sm">© 2024 Dr. Piotr Brych - Praca magisterska na temat Candomblé</p>
+          <p class="text-stone-500 text-xs mt-2">
+            Badania przeprowadzone 2012-2014, opublikowane zgodnie z zasadami akademickimi
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Progress bar functionality
+      function updateProgressBar() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        document.getElementById("progressBar").style.width = scrollPercent + "%";
+      }
+
+      window.addEventListener("scroll", updateProgressBar);
+
+      // Navigation highlighting
+      function highlightActiveNav() {
+        const navItems = document.querySelectorAll(".nav-item");
+        navItems.forEach((item) => {
+          item.classList.remove("active");
+        });
+      }
+
+      // Smooth scroll functionality
+      document.documentElement.classList.add("scroll-smooth");
+
+      // Initialize progress bar
+      updateProgressBar();
+    </script>
+  </body>
+</html>
