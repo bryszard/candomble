@@ -4,153 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Candomblé - religia niewolników w Brazylii XXI wieku</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <style>
-      .progress-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(90deg, #d97706, #92400e);
-        z-index: 1000;
-        transition: width 0.1s ease-out;
-      }
 
-      .nav-item {
-        transition: all 0.2s ease;
-      }
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./icons/android-chrome-512x512.png" />
+    <link rel="manifest" href="./icons/site.webmanifest" />
 
-      .nav-item:hover {
-        background: rgba(217, 119, 6, 0.1);
-        border-left: 3px solid #d97706;
-      }
-
-      .nav-item.active {
-        background: rgba(217, 119, 6, 0.15);
-        border-left: 3px solid #d97706;
-        font-weight: 600;
-      }
-
-      .scroll-smooth {
-        scroll-behavior: smooth;
-      }
-
-      /* Critical CSS for scroll positioning and footnotes */
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        scroll-margin-top: 300px;
-      }
-
-      .footnotes {
-        scroll-margin-top: 300px;
-      }
-
-      .footnotes li:target {
-        background-color: #fef3c7;
-        border-left: 4px solid #d97706;
-      }
-
-      .footnotes li {
-        scroll-margin-top: 300px;
-      }
-
-      a[id^="footnote-ref-"] {
-        scroll-margin-top: 300px;
-      }
-
-      /* Highlighting for direct parent elements containing footnote references */
-      #articlesContainer > *:has(a[id^="footnote-ref-"]:target),
-      #articlesContainer p:has(a[id^="footnote-ref-"]:target) {
-        padding-left: 1rem;
-        animation: footnote-highlight 3s ease-in-out forwards;
-      }
-
-      /* Fallback for browsers that don't support :has() */
-      #articlesContainer > *.highlight-footnote-ref,
-      #articlesContainer p.highlight-footnote-ref {
-        padding-left: 1rem;
-        animation: footnote-highlight 3s ease-in-out forwards;
-      }
-
-      /* Simple animation for footnote reference highlighting */
-      @keyframes footnote-highlight {
-        0% {
-          background-color: transparent;
-          border-left: 4px solid transparent;
-        }
-        20% {
-          background-color: #fef3c7;
-          border-left: 4px solid #d97706;
-        }
-        80% {
-          background-color: #fef3c7;
-          border-left: 4px solid #d97706;
-        }
-        100% {
-          background-color: transparent;
-          border-left: 4px solid transparent;
-        }
-      }
-
-      /* List styling */
-      #articlesContainer ul {
-        list-style-type: disc;
-      }
-      #articlesContainer ol {
-        list-style-type: decimal;
-      }
-      #articlesContainer ul ul {
-        list-style-type: circle;
-      }
-      #articlesContainer ul ul ul {
-        list-style-type: square;
-      }
-      #articlesContainer ol ol {
-        list-style-type: lower-alpha;
-      }
-      #articlesContainer ol ol ol {
-        list-style-type: lower-roman;
-      }
-
-      .content-area {
-        min-height: calc(100vh - 180px);
-      }
-
-      .chapter-number {
-        color: #d97706;
-        font-weight: 700;
-        font-size: 0.875rem;
-      }
-
-      .reading-time {
-        color: #92400e;
-        font-size: 0.75rem;
-      }
-
-      .article-content {
-        line-height: 1.8;
-        color: #374151;
-      }
-
-      .article-content h1,
-      .article-content h2,
-      .article-content h3 {
-        color: #92400e;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      .article-content p {
-        margin-bottom: 1.5rem;
-      }
-    </style>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="bg-stone-50 font-serif">
     <!-- Progress Bar -->
@@ -164,7 +28,16 @@
             <div
               class="w-10 h-10 bg-gradient-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center"
             >
-              <i class="fas fa-book text-white text-lg"></i>
+              <svg
+                class="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"
+                ></path>
+              </svg>
             </div>
             <div>
               <h1 class="text-xl font-bold text-stone-800">Candomblé</h1>

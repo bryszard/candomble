@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom components */
+@layer components {
+  .progress-bar {
+    @apply fixed top-0 left-0 w-0 h-1 bg-gradient-to-r from-amber-600 to-amber-800 z-50;
+    transition: width 0.1s ease-out;
+  }
+
+  .nav-item {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .nav-item:hover {
+    @apply bg-amber-50 border-l-4 border-amber-600;
+  }
+
+  .nav-item.active {
+    @apply bg-amber-100 border-l-4 border-amber-600 font-semibold;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .content-area {
+    min-height: calc(100vh - 180px);
+  }
+
+  .chapter-number {
+    @apply text-amber-600 font-bold text-sm;
+  }
+
+  .reading-time {
+    @apply text-amber-800 text-xs;
+  }
+
+  .article-content {
+    @apply leading-relaxed text-stone-700;
+  }
+
+  .article-content h1,
+  .article-content h2,
+  .article-content h3 {
+    @apply text-amber-800 mt-8 mb-4;
+  }
+
+  .article-content p {
+    @apply mb-6;
+  }
+}
+
+/* Critical CSS for scroll positioning and footnotes */
+@layer utilities {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 300px;
+  }
+
+  .footnotes {
+    scroll-margin-top: 300px;
+  }
+
+  .footnotes li:target {
+    @apply bg-amber-100 border-l-4 border-amber-600;
+  }
+
+  .footnotes li {
+    scroll-margin-top: 300px;
+  }
+
+  a[id^="footnote-ref-"] {
+    scroll-margin-top: 300px;
+  }
+
+  /* Highlighting for direct parent elements containing footnote references */
+  #articlesContainer > *:has(a[id^="footnote-ref-"]:target),
+  #articlesContainer p:has(a[id^="footnote-ref-"]:target) {
+    @apply pl-4;
+    animation: footnote-highlight 3s ease-in-out forwards;
+  }
+
+  /* Fallback for browsers that don't support :has() */
+  #articlesContainer > *.highlight-footnote-ref,
+  #articlesContainer p.highlight-footnote-ref {
+    @apply pl-4;
+    animation: footnote-highlight 3s ease-in-out forwards;
+  }
+
+  /* Simple animation for footnote reference highlighting */
+  @keyframes footnote-highlight {
+    0% {
+      background-color: transparent;
+      border-left: 4px solid transparent;
+    }
+    20% {
+      background-color: #fef3c7;
+      border-left: 4px solid #d97706;
+    }
+    80% {
+      background-color: #fef3c7;
+      border-left: 4px solid #d97706;
+    }
+    100% {
+      background-color: transparent;
+      border-left: 4px solid transparent;
+    }
+  }
+}
+
+/* List styling */
+@layer components {
+  #articlesContainer ul {
+    list-style-type: disc;
+  }
+  #articlesContainer ol {
+    list-style-type: decimal;
+  }
+  #articlesContainer ul ul {
+    list-style-type: circle;
+  }
+  #articlesContainer ul ul ul {
+    list-style-type: square;
+  }
+  #articlesContainer ol ol {
+    list-style-type: lower-alpha;
+  }
+  #articlesContainer ol ol ol {
+    list-style-type: lower-roman;
+  }
+}
+
+/* Custom styles for markdown content */
+@layer components {
+  #articlesContainer p {
+    @apply mb-4 leading-relaxed;
+  }
+  #articlesContainer em {
+    @apply italic text-amber-800;
+  }
+  #articlesContainer strong {
+    @apply font-bold text-stone-900;
+  }
+  #articlesContainer table {
+    @apply w-full border-collapse my-6;
+  }
+  #articlesContainer th,
+  #articlesContainer td {
+    @apply border border-stone-300 p-3 text-left;
+  }
+  #articlesContainer th {
+    @apply bg-stone-100 font-semibold text-amber-800;
+  }
+  #articlesContainer tr:nth-child(even) {
+    @apply bg-stone-50;
+  }
+  #articlesContainer blockquote {
+    @apply border-l-4 border-amber-600 pl-4 my-6 italic text-stone-500;
+  }
+  #articlesContainer ul,
+  #articlesContainer ol {
+    @apply my-4 pl-8;
+  }
+  #articlesContainer ul {
+    list-style-type: disc;
+  }
+  #articlesContainer ol {
+    list-style-type: decimal;
+  }
+  #articlesContainer li {
+    @apply mb-2;
+  }
+
+  /* Nested list styling */
+  #articlesContainer ul ul {
+    list-style-type: circle;
+  }
+  #articlesContainer ul ul ul {
+    list-style-type: square;
+  }
+  #articlesContainer ol ol {
+    list-style-type: lower-alpha;
+  }
+  #articlesContainer ol ol ol {
+    list-style-type: lower-roman;
+  }
+
+  /* Footnotes styling */
+  .footnotes {
+    @apply mt-12 pt-8 border-t-2 border-stone-200;
+    scroll-margin-top: 300px;
+  }
+
+  .footnotes ol {
+    @apply text-sm;
+  }
+  .footnotes li {
+    @apply mb-3 p-2 rounded transition-colors duration-300;
+  }
+  .footnotes li:target {
+    @apply bg-amber-100 border-l-4 border-amber-600;
+  }
+
+  /* Ensure footnote backlinks also get proper scroll offset */
+  .footnotes a[href^="#footnote-"] {
+    scroll-margin-top: 300px;
+  }
+
+  /* Ensure footnote references in content get proper scroll offset */
+  a[id^="footnote-ref-"] {
+    scroll-margin-top: 300px;
+  }
+
+  /* Scroll indicator for TOC - always reserve space to prevent content shifting */
+  .toc-container::-webkit-scrollbar {
+    @apply w-2 bg-transparent;
+  }
+  .toc-container::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .toc-container::-webkit-scrollbar-thumb {
+    @apply bg-transparent rounded transition-colors duration-300;
+  }
+  .toc-container:hover::-webkit-scrollbar-thumb {
+    @apply bg-amber-600;
+  }
+  .toc-container:focus::-webkit-scrollbar-thumb {
+    @apply bg-amber-600;
+  }
+
+  /* Reserve space for scrollbar */
+  .toc-container {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  .toc-container:hover {
+    scrollbar-color: #d97706 transparent;
+  }
+  .toc-container:focus {
+    scrollbar-color: #d97706 transparent;
+  }
+
+  /* Ensure TOC takes full height and can scroll */
+  aside .bg-white.rounded-lg.shadow-sm.border.border-stone-200.p-6.flex.flex-col {
+    height: calc(100vh - 400px);
+    max-height: calc(100vh - 400px);
+  }
+
+  /* Ensure TOC container can scroll */
+  .toc-container {
+    max-height: calc(100vh - 450px);
+    overflow-y: auto;
+  }
+}

@@ -1,11 +1,34 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { execSync } = require("child_process");
+
+// Function to compile CSS
+function compileCSS() {
+  try {
+    console.log("🎨 Compiling CSS...");
+
+    // Create src directory if it doesn't exist
+    if (!fs.existsSync("src")) {
+      fs.mkdirSync("src");
+    }
+
+    // Compile Tailwind CSS
+    execSync("npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify", { stdio: "inherit" });
+    console.log("✅ CSS compiled successfully");
+  } catch (error) {
+    console.error("❌ CSS compilation failed:", error);
+    throw error;
+  }
+}
 
 // Main build function
 async function build() {
   try {
     console.log("🚀 Starting build process...");
+
+    // Compile CSS first
+    compileCSS();
 
     // Dynamic imports for ES modules
     const { marked } = await import("marked");
@@ -208,130 +231,6 @@ async function build() {
       console.log("❌ TOC container not found");
     }
 
-    // Add custom CSS for markdown content
-    const customCSS = `
-      <style>
-        /* Markdown content styling */
-        #articlesContainer p { margin-bottom: 1rem; line-height: 1.7; }
-        #articlesContainer em { font-style: italic; color: #92400e; }
-        #articlesContainer strong { font-weight: bold; color: #451a03; }
-        #articlesContainer table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-        #articlesContainer th, #articlesContainer td {
-          border: 1px solid #d6d3d1;
-          padding: 0.75rem;
-          text-align: left;
-        }
-        #articlesContainer th {
-          background-color: #f5f5f4;
-          font-weight: 600;
-          color: #92400e;
-        }
-        #articlesContainer tr:nth-child(even) { background-color: #fafaf9; }
-        #articlesContainer blockquote {
-          border-left: 4px solid #d97706;
-          padding-left: 1rem;
-          margin: 1.5rem 0;
-          font-style: italic;
-          color: #78716c;
-        }
-        #articlesContainer ul, #articlesContainer ol {
-          margin: 1rem 0;
-          padding-left: 2rem;
-        }
-        #articlesContainer ul { list-style-type: disc; }
-        #articlesContainer ol { list-style-type: decimal; }
-        #articlesContainer li { margin-bottom: 0.5rem; }
-
-        /* Nested list styling */
-        #articlesContainer ul ul { list-style-type: circle; }
-        #articlesContainer ul ul ul { list-style-type: square; }
-        #articlesContainer ol ol { list-style-type: lower-alpha; }
-        #articlesContainer ol ol ol { list-style-type: lower-roman; }
-
-        /* Footnotes styling */
-        .footnotes {
-          margin-top: 3rem;
-          padding-top: 2rem;
-          border-top: 2px solid #e7e5e4;
-          scroll-margin-top: 300px; /* 300px space above footnotes when scrolling */
-        }
-
-        /* Ensure all headings have proper scroll offset */
-        h1, h2, h3, h4, h5, h6 {
-          scroll-margin-top: 300px;
-        }
-        .footnotes ol { font-size: 0.875rem; }
-        .footnotes li {
-          margin-bottom: 0.75rem;
-          padding: 0.5rem;
-          border-radius: 4px;
-          transition: background-color 0.3s ease;
-        }
-        .footnotes li:target {
-          background-color: #fef3c7; /* Highlight when targeted */
-          border-left: 4px solid #d97706;
-        }
-
-        /* Ensure footnote backlinks also get proper scroll offset */
-        .footnotes a[href^="#footnote-"] {
-          scroll-margin-top: 300px;
-        }
-
-        /* Ensure footnote references in content get proper scroll offset */
-        a[id^="footnote-ref-"] {
-          scroll-margin-top: 300px;
-        }
-
-        /* Scroll indicator for TOC - always reserve space to prevent content shifting */
-        .toc-container::-webkit-scrollbar {
-          width: 8px;
-          background: transparent;
-        }
-        .toc-container::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .toc-container::-webkit-scrollbar-thumb {
-          background: transparent;
-          border-radius: 4px;
-          transition: background 0.3s ease;
-        }
-        .toc-container:hover::-webkit-scrollbar-thumb {
-          background: #d97706;
-        }
-        .toc-container:focus::-webkit-scrollbar-thumb {
-          background: #d97706;
-        }
-
-        /* Reserve space for scrollbar */
-        .toc-container {
-          scrollbar-width: thin;
-          scrollbar-color: transparent transparent;
-        }
-        .toc-container:hover {
-          scrollbar-color: #d97706 transparent;
-        }
-        .toc-container:focus {
-          scrollbar-color: #d97706 transparent;
-        }
-
-        /* Ensure TOC takes full height and can scroll */
-        aside .bg-white.rounded-lg.shadow-sm.border.border-stone-200.p-6.flex.flex-col {
-          height: calc(100vh - 400px);
-          max-height: calc(100vh - 400px);
-        }
-
-        /* Ensure TOC container can scroll */
-        .toc-container {
-          max-height: calc(100vh - 450px);
-          overflow-y: auto;
-        }
-
-      </style>
-    `;
-
-    const existingScript = $("script").last().html();
-    $("script").last().html(existingScript);
-
     // Create dist directory if it doesn't exist
     if (!fs.existsSync("dist")) {
       fs.mkdirSync("dist");
@@ -353,21 +252,9 @@ async function build() {
       });
     }
 
-    // Add custom CSS to head (just before writing)
-    const headElement = $("head");
-    console.log("🔍 Head element found:", headElement.length);
-    headElement.append(customCSS);
-    console.log("🎨 Custom CSS injected");
-
-    // Debug: Check if CSS was added
-    const headHTML = $("head").html();
-    console.log("🔍 Head HTML contains CSS:", headHTML.includes("list-style-type"));
-
     // Write the final HTML
     console.log("💾 Writing final HTML...");
     const finalHTML = $.html();
-    console.log("🔍 HTML contains CSS:", finalHTML.includes("scroll-margin-top"));
-    console.log("🔍 HTML contains footnote CSS:", finalHTML.includes("footnote"));
     fs.writeFileSync("dist/index.html", finalHTML);
 
     console.log("✅ Build completed successfully!");
