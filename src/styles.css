@@ -79,7 +79,6 @@
     scroll-margin-top: 300px;
   }
 
-  /* Highlighting for direct parent elements containing footnote references */
   #articlesContainer > *:has(a[id^="footnote-ref-"]:target),
   #articlesContainer p:has(a[id^="footnote-ref-"]:target) {
     @apply pl-4;
@@ -98,18 +97,22 @@
     0% {
       background-color: transparent;
       border-left: 4px solid transparent;
+      padding-left: 0;
     }
     20% {
       background-color: #fef3c7;
       border-left: 4px solid #d97706;
+      padding-left: 1rem;
     }
     80% {
       background-color: #fef3c7;
       border-left: 4px solid #d97706;
+      padding-left: 1rem;
     }
     100% {
       background-color: transparent;
       border-left: 4px solid transparent;
+      padding-left: 0;
     }
   }
 }
@@ -256,5 +259,94 @@
   .toc-container {
     max-height: calc(100vh - 450px);
     overflow-y: auto;
+  }
+
+  /* Mobile TOC modal styles */
+  .mobile-toc-modal {
+    backdrop-filter: blur(4px);
+  }
+
+  /* Mobile TOC modal should be controlled by JavaScript, not CSS */
+
+  /* Mobile nav item styles */
+  #mobileTocContent .nav-item {
+    @apply px-3 py-2 rounded-md text-sm font-normal text-stone-700 hover:bg-amber-50 transition-colors;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  #mobileTocContent .nav-item:hover {
+    @apply bg-amber-50;
+  }
+
+  /* Mobile responsive adjustments */
+  @media (max-width: 1023px) {
+    /* Hide desktop sidebar on mobile */
+    aside {
+      display: none !important;
+    }
+
+    /* Adjust main content width on mobile */
+    .flex-1 {
+      width: 100% !important;
+    }
+  }
+
+  /* Desktop adjustments - hide mobile elements */
+  @media (min-width: 1024px) {
+    /* Hide mobile TOC button on desktop */
+    #mobileTocButton {
+      display: none !important;
+    }
+  }
+
+  /* Very small screen adjustments (384px and below) */
+  @media (max-width: 450px) {
+    /* Ensure modal fits on very small screens with minimal margins */
+    #tocModal .fixed.top-2.bottom-2.left-2.right-2 {
+      top: 4px !important;
+      bottom: 4px !important;
+      left: 4px !important;
+      right: 4px !important;
+    }
+
+    /* Restore reasonable header padding */
+    #tocModal .p-3 {
+      padding: 8px !important;
+    }
+
+    /* Restore reasonable content padding */
+    #tocModal .flex-1.overflow-y-auto.p-3 {
+      padding: 8px !important;
+    }
+
+    /* Make TOC items readable with proper text wrapping */
+    #mobileTocContent .nav-item {
+      padding: 6px 8px !important;
+      font-size: 0.875rem !important;
+      line-height: 1.4 !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      hyphens: auto !important;
+      white-space: normal !important;
+    }
+
+    /* Ensure header text fits */
+    #tocModal h2 {
+      font-size: 1rem !important;
+    }
+
+    /* Ensure close button is reasonable size */
+    #tocModal button {
+      padding: 6px !important;
+      min-width: auto !important;
+    }
+
+    /* Make sure modal content doesn't overflow horizontally */
+    #tocModal .flex.flex-col {
+      max-width: 84% !important;
+      overflow-x: hidden !important;
+    }
   }
 }

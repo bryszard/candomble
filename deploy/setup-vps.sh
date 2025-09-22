@@ -41,6 +41,7 @@ cat > /etc/nginx/sites-available/candomble << 'EOF'
 server {
     listen 80;
     listen [::]:80;
+    listen 192.168.2.188:20288;
     server_name candomble.pl www.candomble.pl;
 
     root /var/www/candomble;
@@ -77,6 +78,9 @@ systemctl enable nginx
 echo -e "${YELLOW}🔥 Configuring firewall...${NC}"
 ufw allow 'Nginx Full'
 ufw allow OpenSSH
+# Allow IPv4 ports
+ufw allow 20288/tcp
+ufw allow 30288/tcp
 ufw --force enable
 
 echo -e "${GREEN}✅ VPS setup completed!${NC}"

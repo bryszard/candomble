@@ -8,7 +8,8 @@ set -e  # Exit on any error
 # Configuration
 DOMAIN="candomble.pl"
 VPS_USER="root"  # Change this to your VPS username
-VPS_HOST="2a01:4f9:4a:27c1::288"  # Your VPS IPv6 address
+VPS_HOST_IPV6="2a01:4f9:4a:27c1::288"  # Your VPS IPv6 address
+VPS_HOST_IPV4="192.168.2.188"  # Your VPS IPv4 address
 DEPLOY_PATH="/var/www/candomble"
 NGINX_CONFIG_PATH="/etc/nginx/sites-available/candomble"
 
@@ -34,13 +35,13 @@ npm run build
 echo -e "${YELLOW}📁 Creating deployment package...${NC}"
 tar -czf candomble-deploy.tar.gz -C dist .
 
-# Upload to VPS
-echo -e "${YELLOW}📤 Uploading to VPS...${NC}"
-scp candomble-deploy.tar.gz ${VPS_USER}@[${VPS_HOST}]:/tmp/
+# Upload to VPS (using IPv6)
+echo -e "${YELLOW}📤 Uploading to VPS via IPv6...${NC}"
+scp candomble-deploy.tar.gz ${VPS_USER}@[${VPS_HOST_IPV6}]:/tmp/
 
 # Deploy on VPS
 echo -e "${YELLOW}🔧 Deploying on VPS...${NC}"
-ssh ${VPS_USER}@${VPS_HOST} << 'EOF'
+ssh ${VPS_USER}@${VPS_HOST_IPV6} << 'EOF'
     # Create deployment directory
     sudo mkdir -p /var/www/candomble
 

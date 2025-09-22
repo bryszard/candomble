@@ -44,9 +44,51 @@
               <p class="text-xs text-stone-600">religia niewolników w Brazylii XXI wieku</p>
             </div>
           </div>
+
+          <!-- Mobile TOC Button -->
+          <button
+            id="mobileTocButton"
+            class="lg:hidden p-2 rounded-md text-stone-600 hover:text-stone-800 hover:bg-stone-100 transition-colors"
+            aria-label="Otwórz spis treści"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 10h16M4 14h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
+
+    <!-- TOC Modal -->
+    <div id="tocModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+      <div class="fixed top-2 bottom-2 left-2 right-2 sm:inset-4 bg-white rounded-lg shadow-xl flex flex-col">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center p-3 sm:p-4 border-b border-stone-200">
+          <h2 class="text-base sm:text-lg font-semibold text-stone-800">Spis treści</h2>
+          <button
+            id="closeTocModal"
+            class="p-2 rounded-md text-stone-600 hover:text-stone-800 hover:bg-stone-100 transition-colors"
+            aria-label="Zamknij spis treści"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="flex-1 overflow-y-auto p-3 sm:p-4">
+          <div id="mobileTocContent" class="space-y-1">
+            <!-- Mobile TOC content will be generated here by build script -->
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <main class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -69,8 +111,8 @@
           </div>
         </div>
 
-        <!-- Navigation Section (25%) -->
-        <aside class="lg:w-1/4">
+        <!-- Navigation Section (25%) - Hidden on mobile -->
+        <aside class="hidden lg:block lg:w-1/4">
           <div class="sticky top-24">
             <img src="./images/Xire.png" alt="Xirê de Candomblé" class="w-[250px] h-auto mb-6 mx-auto" />
             <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6">
@@ -117,6 +159,57 @@
 
       // Smooth scroll functionality
       document.documentElement.classList.add("scroll-smooth");
+
+      // Mobile TOC Functionality
+      const mobileTocButton = document.getElementById("mobileTocButton");
+      const tocModal = document.getElementById("tocModal");
+      const closeTocModal = document.getElementById("closeTocModal");
+
+      // Ensure modal starts hidden
+      if (tocModal) {
+        tocModal.classList.add("hidden");
+      }
+
+      // Open TOC modal directly
+      if (mobileTocButton) {
+        mobileTocButton.addEventListener("click", () => {
+          tocModal.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
+        });
+      }
+
+      // Close TOC modal
+      function closeTocModalFunc() {
+        tocModal.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+
+      if (closeTocModal) {
+        closeTocModal.addEventListener("click", closeTocModalFunc);
+      }
+
+      // Close TOC modal when clicking overlay
+      tocModal.addEventListener("click", (e) => {
+        if (e.target === tocModal) {
+          closeTocModalFunc();
+        }
+      });
+
+      // Close TOC modal with Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (!tocModal.classList.contains("hidden")) {
+            closeTocModalFunc();
+          }
+        }
+      });
+
+      // Handle TOC navigation in mobile modal
+      document.addEventListener("click", (e) => {
+        if (e.target.closest("#mobileTocContent a")) {
+          closeTocModalFunc();
+        }
+      });
 
       // Initialize progress bar
       updateProgressBar();

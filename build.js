@@ -174,6 +174,55 @@ async function build() {
       return tocHTML;
     }
 
+    // Function to generate mobile TOC HTML (simplified for mobile)
+    function generateMobileTOC(toc) {
+      let tocHTML = '<nav class="space-y-1">';
+
+      toc.forEach((item, index) => {
+        let indent = "";
+        let textSize = "text-sm";
+        let fontWeight = "font-normal";
+
+        // Process italics in TOC text and replace "Footnotes" with "Przypisy"
+        let processedTocText = item.text.replace(/_([^_]+)_/g, "<em>$1</em>");
+        processedTocText = processedTocText.replace(/Footnotes/g, "Przypisy");
+
+        // Special handling for Footnotes/Przypisy - always treat as top-level
+        const isFootnotes =
+          processedTocText.toLowerCase().includes("przypisy") || item.text.toLowerCase().includes("footnotes");
+
+        // Set styling based on heading level
+        if (item.level === 1 || isFootnotes) {
+          fontWeight = "font-bold";
+          textSize = "text-base";
+          indent = "";
+        } else if (item.level === 2) {
+          indent = "ml-3";
+          fontWeight = "font-semibold";
+          textSize = "text-sm";
+        } else if (item.level === 3) {
+          indent = "ml-6";
+          fontWeight = "font-medium";
+          textSize = "text-sm";
+        } else {
+          indent = "ml-9";
+          textSize = "text-sm";
+        }
+
+        tocHTML += `
+          <a
+            href="#${item.id}"
+            class="nav-item block px-3 py-2 rounded-md ${textSize} ${fontWeight} text-stone-700 hover:bg-amber-50 ${indent} transition-colors"
+          >
+            ${processedTocText}
+          </a>
+        `;
+      });
+
+      tocHTML += "</nav>";
+      return tocHTML;
+    }
+
     // Read the markdown file
     console.log("📖 Reading praca.md...");
     const markdownContent = fs.readFileSync("praca.md", "utf8");
@@ -204,6 +253,7 @@ async function build() {
     console.log("📋 Generating table of contents...");
     const toc = extractTOC(htmlContent);
     const tocHTML = generateTOC(toc);
+    const mobileTocHTML = generateMobileTOC(toc);
 
     // Read the template HTML
     console.log("📄 Reading template HTML...");
@@ -226,9 +276,18 @@ async function build() {
     const tocContainer = $("aside .bg-white.rounded-lg.shadow-sm.border.border-stone-200.p-6");
     if (tocContainer.length > 0) {
       tocContainer.addClass("flex flex-col").html(sidebarContent);
-      console.log("📋 TOC updated successfully");
+      console.log("📋 Desktop TOC updated successfully");
     } else {
-      console.log("❌ TOC container not found");
+      console.log("❌ Desktop TOC container not found");
+    }
+
+    // Update mobile TOC content
+    const mobileTocContainer = $("#mobileTocContent");
+    if (mobileTocContainer.length > 0) {
+      mobileTocContainer.html(mobileTocHTML);
+      console.log("📱 Mobile TOC updated successfully");
+    } else {
+      console.log("❌ Mobile TOC container not found");
     }
 
     // Create dist directory if it doesn't exist

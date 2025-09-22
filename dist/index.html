@@ -33,9 +33,232 @@
               <p class="text-xs text-stone-600">religia niewolników w Brazylii XXI wieku</p>
             </div>
           </div>
+
+          <!-- Mobile TOC Button -->
+          <button id="mobileTocButton" class="lg:hidden p-2 rounded-md text-stone-600 hover:text-stone-800 hover:bg-stone-100 transition-colors" aria-label="Otwórz spis treści">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
+
+    <!-- TOC Modal -->
+    <div id="tocModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+      <div class="fixed top-2 bottom-2 left-2 right-2 sm:inset-4 bg-white rounded-lg shadow-xl flex flex-col">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center p-3 sm:p-4 border-b border-stone-200">
+          <h2 class="text-base sm:text-lg font-semibold text-stone-800">Spis treści</h2>
+          <button id="closeTocModal" class="p-2 rounded-md text-stone-600 hover:text-stone-800 hover:bg-stone-100 transition-colors" aria-label="Zamknij spis treści">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="flex-1 overflow-y-auto p-3 sm:p-4">
+          <div id="mobileTocContent" class="space-y-1"><nav class="space-y-1">
+          <a href="#i-wstp" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            I. Wstęp
+          </a>
+        
+          <a href="#1-pytania-badawcze-i-teza" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            1. Pytania badawcze i teza
+          </a>
+        
+          <a href="#2-rda" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            2. Źródła
+          </a>
+        
+          <a href="#3-uwagi-dotyczce-nazw-i-pisowni" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            3. Uwagi dotyczące nazw i pisowni
+          </a>
+        
+          <a href="#ii-korzenie-_candombl_" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            II. Korzenie candomblé
+          </a>
+        
+          <a href="#1-to-historia-niewolnictwa-w-brazylii-i-pochodzenie-niewolnikw" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            1. Tło – historia niewolnictwa w Brazylii i pochodzenie niewolników
+          </a>
+        
+          <a href="#a-ramy-czasowe-i-skala-zjawiska" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Ramy czasowe i skala zjawiska
+          </a>
+        
+          <a href="#b-geograficzne-i-etniczne-rda-niewolnikw-afrykaskie-nacje-i-plemiona-w-brazylii" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Geograficzne i etniczne źródła niewolników – afrykańskie nacje i plemiona w Brazylii
+          </a>
+        
+          <a href="#2-przekrj-spoeczny-niewolnikw-i-ich-wierzenia" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            2. Przekrój społeczny niewolników i ich wierzenia
+          </a>
+        
+          <a href="#a-poziom-rozwoju-spoecznego-i-cywilizacyjnego-czarnoskrych-niewolnikw" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Poziom rozwoju społecznego i cywilizacyjnego czarnoskórych niewolników
+          </a>
+        
+          <a href="#b-tradycyjne-religie-miejsc-pochodzenia-niewolnikw" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Tradycyjne religie miejsc pochodzenia niewolników
+          </a>
+        
+          <a href="#iii-_candombl_-narodziny-i-rozwj" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            III. Candomblé – narodziny i rozwój
+          </a>
+        
+          <a href="#1-konsolidacja-wierze-afrykaskich-w-stanie-bahia" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            1. Konsolidacja wierzeń afrykańskich w stanie Bahia
+          </a>
+        
+          <a href="#a-przed-_candombl_-_calundu_" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Przed candomblé – calundu
+          </a>
+        
+          <a href="#b-od-_calundu_-do-_candombl_-kult-w-dzielnicy-barroquinha" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Od calundu do candomblé – kult w dzielnicy Barroquinha
+          </a>
+        
+          <a href="#c-podstawy-mitologii-i-rytuau" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            c. Podstawy mitologii i rytuału
+          </a>
+        
+          <a href="#d-wygnanie-_candombl_-z-barroquinhi-i-narodziny-religii" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            d. Wygnanie candomblé z Barroquinhi i narodziny religii
+          </a>
+        
+          <a href="#2-definicja-i-podziay" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            2. Definicja i podziały
+          </a>
+        
+          <a href="#a-konstrukcja-definicji-_candombl_" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Konstrukcja definicji candomblé
+          </a>
+        
+          <a href="#b-czy-istnieje-jedno-candombl" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Czy istnieje jedno candomblé?
+          </a>
+        
+          <a href="#3-ekspansja-afrobrazylijskiej-religii" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            3. Ekspansja afrobrazylijskiej religii
+          </a>
+        
+          <a href="#a-salwador" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Salwador
+          </a>
+        
+          <a href="#b-poza-stanem-bahia-rio-de-janeiro" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Poza stanem Bahia – Rio de Janeiro
+          </a>
+        
+          <a href="#c-poza-stanem-bahia-so-paulo" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            c. Poza stanem Bahia – São Paulo
+          </a>
+        
+          <a href="#d-_candombl_-w-brazylii-dzi-liczba-wyznawcw-i-przekrj-spoeczny" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            d. Candomblé w Brazylii dziś – liczba wyznawców i przekrój społeczny
+          </a>
+        
+          <a href="#iv-podstawy-wierze-i-rytuaw-w-_candombl-ketu_" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            IV. Podstawy wierzeń i rytuałów w candomblé ketu
+          </a>
+        
+          <a href="#1-_orixs-_-opis-najwaniejszych-bstw" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            1. Orixás – opis najważniejszych bóstw
+          </a>
+        
+          <a href="#2-inicjacja-moment-poczenia-czowieka-z-bstwem-oraz-now-rodzin" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            2. Inicjacja – moment połączenia człowieka z bóstwem oraz nową rodziną
+          </a>
+        
+          <a href="#3-wita-i-zobowizania-ku-czci-_orixs_" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            3. Święta i „zobowiązania” ku czci orixás
+          </a>
+        
+          <a href="#a-_odum_-rok-rytualny-w-_candombl_" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Odum – rok rytualny w candomblé
+          </a>
+        
+          <a href="#b-struktura-obrzdw" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Struktura obrzędów
+          </a>
+        
+          <a href="#c-_guas-de-oxal-_-pocztek-rytualnego-roku" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            c. Águas de Oxalá – początek rytualnego roku
+          </a>
+        
+          <a href="#d-_axex-_-ceremonia-pogrzebowa" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            d. Axexé – ceremonia pogrzebowa
+          </a>
+        
+          <a href="#e-zobowizania-wobec-_orixs_" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            e. „Zobowiązania” wobec orixás
+          </a>
+        
+          <a href="#4-mitologia-_orixs_-i-jej-odtwarzanie" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            4. Mitologia orixás i jej odtwarzanie
+          </a>
+        
+          <a href="#a-pami-o-mitach-i-ich-odtwarzanie" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Pamięć o mitach i ich odtwarzanie
+          </a>
+        
+          <a href="#b-mit-exu-zdobywa-wadz-nad-rozstajami-drg" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Mit „Exu zdobywa władzę nad rozstajami dróg”
+          </a>
+        
+          <a href="#c-mit-ogum-odrzuca-oi-z-powodu-xang" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            c. Mit „Ogum odrzuca Oię z powodu Xangô”
+          </a>
+        
+          <a href="#d-mit-oxssi-zabija-matk-strzaem-z-uku" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            d. Mit „Oxóssi zabija matkę strzałem z łuku”
+          </a>
+        
+          <a href="#v-_candombl_-jako-religia-xxi-w" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            V. Candomblé jako religia XXI w.
+          </a>
+        
+          <a href="#1-moralno-etyka-i-religia-zwizki-tych-zjawisk-w-chrzecijastwie-islamie-i-_candombl_" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            1. Moralność (etyka) i religia – związki tych zjawisk w chrześcijaństwie, islamie i candomblé
+          </a>
+        
+          <a href="#a-islam" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            a. Islam
+          </a>
+        
+          <a href="#b-chrzecijastwo" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            b. Chrześcijaństwo
+          </a>
+        
+          <a href="#c-_candombl_" class="nav-item block px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-amber-50 ml-6 transition-colors">
+            c. Candomblé
+          </a>
+        
+          <a href="#2-religia-magiczna-dla-miast-brazylijskich-xxi-w---czynniki-przycigajce-wyznawcw" class="nav-item block px-3 py-2 rounded-md text-sm font-semibold text-stone-700 hover:bg-amber-50 ml-3 transition-colors">
+            2. Religia magiczna dla miast brazylijskich XXI w. - czynniki przyciągające wyznawców
+          </a>
+        
+          <a href="#vi-wnioski" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            VI. Wnioski
+          </a>
+        
+          <a href="#bibliografia" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            Bibliografia
+          </a>
+        
+          <a href="#rda-internetowe" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            Źródła internetowe
+          </a>
+        
+          <a href="#footnote-label" class="nav-item block px-3 py-2 rounded-md text-base font-bold text-stone-700 hover:bg-amber-50  transition-colors">
+            Przypisy
+          </a>
+        </nav></div>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <main class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -1514,8 +1737,8 @@
 </div>
         </div>
 
-        <!-- Navigation Section (25%) -->
-        <aside class="lg:w-1/4">
+        <!-- Navigation Section (25%) - Hidden on mobile -->
+        <aside class="hidden lg:block lg:w-1/4">
           <div class="sticky top-24">
             <img src="./images/Xire.png" alt="Xirê de Candomblé" class="w-[250px] h-auto mb-6 mx-auto">
             <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6 flex flex-col">
@@ -1756,6 +1979,57 @@
 
       // Smooth scroll functionality
       document.documentElement.classList.add("scroll-smooth");
+
+      // Mobile TOC Functionality
+      const mobileTocButton = document.getElementById("mobileTocButton");
+      const tocModal = document.getElementById("tocModal");
+      const closeTocModal = document.getElementById("closeTocModal");
+
+      // Ensure modal starts hidden
+      if (tocModal) {
+        tocModal.classList.add("hidden");
+      }
+
+      // Open TOC modal directly
+      if (mobileTocButton) {
+        mobileTocButton.addEventListener("click", () => {
+          tocModal.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
+        });
+      }
+
+      // Close TOC modal
+      function closeTocModalFunc() {
+        tocModal.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+
+      if (closeTocModal) {
+        closeTocModal.addEventListener("click", closeTocModalFunc);
+      }
+
+      // Close TOC modal when clicking overlay
+      tocModal.addEventListener("click", (e) => {
+        if (e.target === tocModal) {
+          closeTocModalFunc();
+        }
+      });
+
+      // Close TOC modal with Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (!tocModal.classList.contains("hidden")) {
+            closeTocModalFunc();
+          }
+        }
+      });
+
+      // Handle TOC navigation in mobile modal
+      document.addEventListener("click", (e) => {
+        if (e.target.closest("#mobileTocContent a")) {
+          closeTocModalFunc();
+        }
+      });
 
       // Initialize progress bar
       updateProgressBar();
