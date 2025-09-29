@@ -715,284 +715,155 @@ Trzeci mit dotyczy przede wszystkim bóstwa Oxóssi, choć biorą w nim udział 
 
 ### b. Mit „Exu zdobywa władzę nad rozstajami dróg”
 
-Exu nie miał bogactwa, ni gospodarstwa, ni rzeki,
+Exu nie miał bogactwa, ni gospodarstwa, ni rzeki, <br/>
+Nie miał zawodu, ni sztuki żadnej nie posiadł, ni misji, <br/>
+Exu włóczył się po świecie bez końca. <br/>
+Wówczas pewnego dnia, Exu poszedł do domu Oxalá. <br/>
+Chodził codziennie do domu Oxalá. <br/>
+W domu Oxalá, Exu spędzał czas <br/>
+oglądając jak starzec tworzy istoty ludzkie. <br/>
+Wielu i wielu również przychodziło odwiedzać Oxalá, <br/>
+ale zostawali krótko, <br/>
+cztery dni, osiem dni, i nic się nie uczyli. <br/>
+Przynosili ofiary, oglądali starego _orixá_, <br/>
+podziwiali jego pracę i odchodzili. <br/>
+Exu został w domu Oxalá szesnaście lat. <br/>
+Exu koncentrował uwagę na tworzeniu <br/>
+i nauczył się jak Oxalá tworzył <br/>
+ręce, nogi, usta, oczy, penisa meżczyzn, <br/>
+ręce, nogi, usta, oczy, waginę kobiet. <br/>
+Przez szesnaście lat pozostał tam pomagając staremu _orixá_. <br/>
+Exu nie pytał. <br/>
+Exu obserwował. <br/>
+Exu skupiał uwagę. <br/>
+Exu nauczył się wszystkiego. <br/>
 
-Nie miał zawodu, ni sztuki żadnej nie posiadł, ni misji,
-
-Exu włóczył się po świecie bez końca.
-
-Wówczas pewnego dnia, Exu poszedł do domu Oxalá.
-
-Chodził codziennie do domu Oxalá.
-
-W domu Oxalá, Exu spędzał czas
-
-oglądając jak starzec tworzy istoty ludzkie.
-
-Wielu i wielu również przychodziło odwiedzać Oxalá,
-
-ale zostawali krótko,
-
-cztery dni, osiem dni, i nic się nie uczyli.
-
-Przynosili ofiary, oglądali starego _orixá_,
-
-podziwiali jego pracę i odchodzili.
-
-Exu został w domu Oxalá szesnaście lat.
-
-Exu koncentrował uwagę na tworzeniu
-
-i nauczył się jak Oxalá tworzył
-
-ręce, nogi, usta, oczy, penisa meżczyzn,
-
-ręce, nogi, usta, oczy, waginę kobiet.
-
-Przez szesnaście lat pozostał tam pomagając staremu _orixá_.
-
-Exu nie pytał.
-
-Exu obserwował.
-
-Exu skupiał uwagę.
-
-Exu nauczył się wszystkiego.
-
-Pewnego dnia Oxalá powiedział Exu, żeby ten stanął na rozstaju dróg
-
-przez który przechodzili wszyscy, którzy przychodzili do jego domu.
-
-Żeby został tam i nie puszczał nikogo, kto nie przyniósłby
-
-ofiary dla Oxalá.
-
-Oxalá miał coraz więcej ludzi do tworzenia.
-
-Oxalá nie chciał tracić czasu
-
-odbierając dary, które wszyscy mu ofiarowali.
-
-Oxalá nie miał nawet czasu na odwiedziny.
-
-Exu nauczył się wszystkiego i teraz mógł pomagać Oxalá.
-
-Exu zbierał _ebós_ dla Oxalá.
-
-Exu odbierał ofiary i wręczał je Oxalá.
-
-Exu dobrze wykonywał swoją pracę
-
-i Oxalá postanowił go wynagrodzić.
-
-W ten sposób, kto przychodził do domu Oxalá
-
-musiał zapłacić też coś Exu.
-
-Kto wracał z domu Oxalá
-
-również musiał zapłacić coś Exu.
-
-Exu pozostawał zawsze na posterunku
-
-pilnując domu Oxalá.
-
-Uzbrojony w _ogó_, potężną maczugę,
-
-odganiał niepożądanych
-
-i karał tego, kto próbował się śmiać z jego służby.
-
-Exu za dużo pracował i postawił tam swój dom,
-
-tam na rozstaju dróg.
-
-Zdobył rentowną pracę, zdobył swoje miejsce, swój dom.
-
-Exu stał się bogaty i potężny.
-
-Nikt nie może przejść przez skrzyżowanie
-
+Pewnego dnia Oxalá powiedział Exu, żeby ten stanął na rozstaju dróg <br/>
+przez który przechodzili wszyscy, którzy przychodzili do jego domu. <br/>
+Żeby został tam i nie puszczał nikogo, kto nie przyniósłby <br/>
+ofiary dla Oxalá. <br/>
+Oxalá miał coraz więcej ludzi do tworzenia. <br/>
+Oxalá nie chciał tracić czasu <br/>
+odbierając dary, które wszyscy mu ofiarowali. <br/>
+Oxalá nie miał nawet czasu na odwiedziny. <br/>
+Exu nauczył się wszystkiego i teraz mógł pomagać Oxalá. <br/>
+Exu zbierał _ebós_ dla Oxalá. <br/>
+Exu odbierał ofiary i wręczał je Oxalá. <br/>
+Exu dobrze wykonywał swoją pracę <br/>
+i Oxalá postanowił go wynagrodzić. <br/>
+W ten sposób, kto przychodził do domu Oxalá <br/>
+musiał zapłacić też coś Exu. <br/>
+Kto wracał z domu Oxalá <br/>
+również musiał zapłacić coś Exu. <br/>
+Exu pozostawał zawsze na posterunku <br/>
+pilnując domu Oxalá. <br/>
+Uzbrojony w _ogó_, potężną maczugę, <br/>
+odganiał niepożądanych <br/>
+i karał tego, kto próbował się śmiać z jego służby. <br/>
+Exu za dużo pracował i postawił tam swój dom, <br/>
+tam na rozstaju dróg. <br/>
+Zdobył rentowną pracę, zdobył swoje miejsce, swój dom. <br/>
+Exu stał się bogaty i potężny. <br/>
+Nikt nie może przejść przez skrzyżowanie <br/>
 nie płacąc nic Exu[^210].
 
 ### c. Mit „Ogum odrzuca Oię z powodu Xangô”
 
-Ogum mieszkał z Oią[^211].
-
-Pewnego dnia jego brat Xangô przyszedł go odwiedzić
-
-i, w domu Oguma, Xangô natknął się na jego piękną żonę.
-
-Wrócił do domu udręczony pięknością, którą zobaczył.
-
-Pożądał Oii gorąco.
-
+Ogum mieszkał z Oią[^211]. <br/>
+Pewnego dnia jego brat Xangô przyszedł go odwiedzić <br/>
+i, w domu Oguma, Xangô natknął się na jego piękną żonę. <br/>
+Wrócił do domu udręczony pięknością, którą zobaczył. <br/>
+Pożądał Oii gorąco. <br/>
 Nie porzucał myśli, by posiąść żonę swojego brata.
 
-Xangô wrócił do domu Oguma
-
-mówiąc, że jest chory i nie może nawet sam się posilić.
-
-Ogum zajął się nim i powiedział mu, żeby nauczył Oię
-
-przygotowywać swoje ulubione danie, _amalá_,
-
-które bez wątpienia zaspokoiłoby jego głód i uleczyłoby go.
-
-Oiá przygotowała _amalá_ według tego, co się nauczyła.
-
-Przed zjedzeniem,
-
-Xangô poprosił Oię, by dodała proszku do przyprawienia,
-
-ostrzegając ją przy tym, żeby nie próbowała potrawy.
-
-Xangô najadł się do syta i zaspokoił głód.
-
+Xangô wrócił do domu Oguma <br/>
+mówiąc, że jest chory i nie może nawet sam się posilić. <br/>
+Ogum zajął się nim i powiedział mu, żeby nauczył Oię <br/>
+przygotowywać swoje ulubione danie, _amalá_, <br/>
+które bez wątpienia zaspokoiłoby jego głód i uleczyłoby go. <br/>
+Oiá przygotowała _amalá_ według tego, co się nauczyła. <br/>
+Przed zjedzeniem, <br/>
+Xangô poprosił Oię, by dodała proszku do przyprawienia, <br/>
+ostrzegając ją przy tym, żeby nie próbowała potrawy. <br/>
+Xangô najadł się do syta i zaspokoił głód. <br/>
 Zakaz sprawił, że Oiá stała się bardzo ciekawa.
 
-Następnego dnia, Oiá znowu przygotowała posiłek,
-
-ale tym razem nie wytrzymała i spróbowała potrawy.
-
-Powiedziała Xangô, że nie czuła niczego specjalnego.
-
-Xangô dał jej proszek do przyprawienia,
-
-Proszek miał moc wkładania w usta płomienia.
-
-Oiá posypała proszkiem _amalá_ i zjadła go.
-
-Od tej pory Oiá ma moc zionięcia ogniem.
-
-Ogum, widząc swoją żonę plującą ogniem,
-
-odrzucił Oię i oddał ją Xangô.
-
-Xangô cynicznie odrzucił ofertę.
-
-Ogum naciskał, żeby zabrał stamtąd Oię.
-
-Xangô oszukał Oguma.
-
-Xangô zabrał Oię do domu,
-
+Następnego dnia, Oiá znowu przygotowała posiłek, <br/>
+ale tym razem nie wytrzymała i spróbowała potrawy. <br/>
+Powiedziała Xangô, że nie czuła niczego specjalnego. <br/>
+Xangô dał jej proszek do przyprawienia, <br/>
+Proszek miał moc wkładania w usta płomienia. <br/>
+Oiá posypała proszkiem _amalá_ i zjadła go. <br/>
+Od tej pory Oiá ma moc zionięcia ogniem. <br/>
+Ogum, widząc swoją żonę plującą ogniem, <br/>
+odrzucił Oię i oddał ją Xangô. <br/>
+Xangô cynicznie odrzucił ofertę. <br/>
+Ogum naciskał, żeby zabrał stamtąd Oię. <br/>
+Xangô oszukał Oguma. <br/>
+Xangô zabrał Oię do domu, <br/>
 szczęśliwy ze swojego zwycięstwa[^212].
 
 ### d. Mit „Oxóssi zabija matkę strzałem z łuku”
 
-Olodumare wezwał Orunmilá
-
-i kazał mu przynieść sobie przepiórkę.
-
-Orunmilá wytłumaczył mu trudności ze złowieniem przepiórki
-
-i błagał go, żeby zlecił mu inną misję.
-
-Olodumare, któremu się sprzeciwiono, wahał się z odpowiedzią
-
-i Orunmilá wyruszył w zewnętrzny świat,
-
-aby zaspokoić wolę swojego Pana.
-
-Orunmilá zagłębił się we wszystkie zakątki Ziemi.
-
-Przeszedł wiele trudności, przechodząc przez odległe ludy.
-
-Wiele razy był ofiarą drwin i sceptycyzmu
-
-w związku z tym, co próbował osiągnąć.
-
-Już mając zarzucić próby i pogodzony z myślą
-
-otrzymania przez Oludumare kary, na którą z pewnością zasługiwał,
-
-Orunmilá ruszył w drogę powrotną.
-
+Olodumare wezwał Orunmilá <br/>
+i kazał mu przynieść sobie przepiórkę. <br/>
+Orunmilá wytłumaczył mu trudności ze złowieniem przepiórki <br/>
+i błagał go, żeby zlecił mu inną misję. <br/>
+Olodumare, któremu się sprzeciwiono, wahał się z odpowiedzią <br/>
+i Orunmilá wyruszył w zewnętrzny świat, <br/>
+aby zaspokoić wolę swojego Pana. <br/>
+Orunmilá zagłębił się we wszystkie zakątki Ziemi. <br/>
+Przeszedł wiele trudności, przechodząc przez odległe ludy. <br/>
+Wiele razy był ofiarą drwin i sceptycyzmu <br/>
+w związku z tym, co próbował osiągnąć. <br/>
+Już mając zarzucić próby i pogodzony z myślą <br/>
+otrzymania przez Oludumare kary, na którą z pewnością zasługiwał, <br/>
+Orunmilá ruszył w drogę powrotną. <br/>
 Był zmęczony i zawiedziony sobą samym.
 
-Poszedł skrótem i usłyszał dźwięk pieśni.
-
-Z każdym krokiem, Orunmilá czuł jak jego siły wracają.
-
-Czuł, że wydarzy się coś nowego.
-
-Dotarł do wioski, gdzie bębny
-
-grały dla Xangô, Iemanjá, Oxum i Obatalá.
-
-W środku koła tańczyła piękna królowa.
-
-To była Oxum, która towarzyszyła swoim tańcem całej tej ceremonii.
-
-Obok niej tańczył korpulentny i jurny młodzieniec.
-
+Poszedł skrótem i usłyszał dźwięk pieśni. <br/>
+Z każdym krokiem, Orunmilá czuł jak jego siły wracają. <br/>
+Czuł, że wydarzy się coś nowego. <br/>
+Dotarł do wioski, gdzie bębny <br/>
+grały dla Xangô, Iemanjá, Oxum i Obatalá. <br/>
+W środku koła tańczyła piękna królowa. <br/>
+To była Oxum, która towarzyszyła swoim tańcem całej tej ceremonii. <br/>
+Obok niej tańczył korpulentny i jurny młodzieniec. <br/>
 To był Oxóssi, wielki myśliwy.
 
-Orunmilá przedstawił się i powiedział, że chce
-
-porozmawiać z tym myśliwym.
-
-Wszyscy się kłaniali przed jego autorytetem
-
-i starali się postawić Oxóssiego przed jego obliczem.
-
-Stary jasnowidz zwrócił się do Oxóssiego i powiedział,
-
-że Olodumaré powierzył mu misję zdobycia przepiórki.
-
-To miała być, teraz, misja Oxóssiego.
-
-Oxóssiemu pochlebiło tak czcigodne zadanie
-
-i obiecał przynieść upolowaną zdobycz następnego ranka.
-
+Orunmilá przedstawił się i powiedział, że chce <br/>
+porozmawiać z tym myśliwym. <br/>
+Wszyscy się kłaniali przed jego autorytetem <br/>
+i starali się postawić Oxóssiego przed jego obliczem. <br/>
+Stary jasnowidz zwrócił się do Oxóssiego i powiedział, <br/>
+że Olodumaré powierzył mu misję zdobycia przepiórki. <br/>
+To miała być, teraz, misja Oxóssiego. <br/>
+Oxóssiemu pochlebiło tak czcigodne zadanie <br/>
+i obiecał przynieść upolowaną zdobycz następnego ranka. <br/>
 Tak się umówiono.
 
-Następnego ranka, Orunmilá udał się do domu Oxóssiego.
-
-Ku jego zdziwieniu, myśliwy stał w drzwiach wściekły
-
-i wystraszony, mówiąc, że ukradli mu jego upolowaną zwierzynę.
-
-Oxóssi, zdezorientowany, zapytał swojej matki o przepiórkę,
-
-a ona odpowiedziała z nutą pogardy,
-
-że nie interesowało jej to.
-
-Orunmilá zażądał, żeby Oxóssi przyniósł mu inną przepiórkę,
-
-bo inaczej nie otrzyma _axé_ od Olodumaré.
-
-Oxóssi upolował inną przepiórkę, chowając ją w torbie.
-
-Znalazł Orunmilá
-
-i oboje udali się do pałacu Olodumaré w Orum.
-
-Wręczyli przepiórkę Panowi Świata.
-
-Olodumaré popatrzył na Oxóssiego z ukosa
-
-i, wyciągając prawe ramię, uczynił go Królem Myśliwych.
-
-Dziękując Olodumaré i chwytając swój łuk,
-
-Oxóssi wystrzelił jedną strzałę nie celując i powiedział, że ta powinna
-
-się wbić w serce tego, kto ukradł pierwszą przepiórkę.
-
-Oxóssi zszedł na Ziemię.
-
-Kiedy dotarł do domu znalazł swoją matkę zabitą
-
-strzałą, która przeszyła jej pierś.
-
-Zrozpaczony, zaczął krzyczeć i przez długi czas
-
-pozostał na kolanach żałując swojego czynu.
-
+Następnego ranka, Orunmilá udał się do domu Oxóssiego. <br/>
+Ku jego zdziwieniu, myśliwy stał w drzwiach wściekły <br/>
+i wystraszony, mówiąc, że ukradli mu jego upolowaną zwierzynę. <br/>
+Oxóssi, zdezorientowany, zapytał swojej matki o przepiórkę, <br/>
+a ona odpowiedziała z nutą pogardy, <br/>
+że nie interesowało jej to. <br/>
+Orunmilá zażądał, żeby Oxóssi przyniósł mu inną przepiórkę, <br/>
+bo inaczej nie otrzyma _axé_ od Olodumaré. <br/>
+Oxóssi upolował inną przepiórkę, chowając ją w torbie. <br/>
+Znalazł Orunmilá <br/>
+i oboje udali się do pałacu Olodumaré w Orum. <br/>
+Wręczyli przepiórkę Panowi Świata. <br/>
+Olodumaré popatrzył na Oxóssiego z ukosa <br/>
+i, wyciągając prawe ramię, uczynił go Królem Myśliwych. <br/>
+Dziękując Olodumaré i chwytając swój łuk, <br/>
+Oxóssi wystrzelił jedną strzałę nie celując i powiedział, że ta powinna <br/>
+się wbić w serce tego, kto ukradł pierwszą przepiórkę. <br/>
+Oxóssi zszedł na Ziemię. <br/>
+Kiedy dotarł do domu znalazł swoją matkę zabitą <br/>
+strzałą, która przeszyła jej pierś. <br/>
+Zrozpaczony, zaczął krzyczeć i przez długi czas <br/>
+pozostał na kolanach żałując swojego czynu. <br/>
 Od tej pory nie przyznawał się do tytułu, który otrzymał od Olodumaré[^213].
 
 # V. _Candomblé_ jako religia XXI w.
