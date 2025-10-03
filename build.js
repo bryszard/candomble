@@ -1,3 +1,9 @@
+// Polyfills for Node.js Web APIs
+global.ReadableStream = require("stream/web").ReadableStream;
+global.WritableStream = require("stream/web").WritableStream;
+global.TransformStream = require("stream/web").TransformStream;
+global.fetch = require("undici").fetch;
+
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");

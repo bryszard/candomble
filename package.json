@@ -15,7 +15,8 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "marked": "^9.1.6",
-    "marked-footnote": "^1.4.0"
+    "marked-footnote": "^1.4.0",
+    "undici": "^5.28.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
