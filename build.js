@@ -44,59 +44,42 @@ async function build() {
       })
     );
 
-    // Configure marked with proper options
-    marked.setOptions({
+    // Configure marked with proper options and custom renderer for v9+ API
+    marked.use({
+      renderer: {
+        heading(text, level) {
+          // Process italics in heading text
+          const processedText = text.replace(/_([^_]+)_/g, "<em>$1</em>");
+
+          const id = text
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, "") // Remove special characters
+            .replace(/\s+/g, "-") // Replace spaces with hyphens
+            .trim();
+
+          const headingClasses = {
+            1: "text-3xl font-bold text-stone-800 mb-6 mt-8",
+            2: "text-2xl font-semibold text-stone-800 mb-4 mt-6",
+            3: "text-xl font-medium text-stone-800 mb-3 mt-4",
+            4: "text-lg font-medium text-stone-800 mb-2 mt-3",
+          };
+
+          return `<h${level} id="${id}" class="${
+            headingClasses[level] || "text-lg font-medium text-stone-800 mb-2 mt-3"
+          }">${processedText}</h${level}>`;
+        },
+
+        footnote_ref(token) {
+          const id = token.id;
+          return `<a href="#footnote-${id}" id="footnote-ref-${id}" class="footnote-ref">[${id}]</a>`;
+        },
+      },
       gfm: true, // GitHub Flavored Markdown
       tables: true, // Enable tables
       breaks: false, // No line breaks
       pedantic: false, // Don't be overly strict
       sanitize: false, // Don't sanitize HTML
       smartypants: false, // Don't use smart quotes
-    });
-
-    // Custom renderer only for headings to add IDs
-    const renderer = new marked.Renderer();
-
-    // Custom heading renderer to add IDs for navigation
-    renderer.heading = function (token) {
-      const text = token.text || "";
-      const level = token.depth || 1;
-
-      // Process italics in heading text
-      const processedText = text.replace(/_([^_]+)_/g, "<em>$1</em>");
-
-      const id = text
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, "") // Remove special characters
-        .replace(/\s+/g, "-") // Replace spaces with hyphens
-        .trim();
-
-      const headingClasses = {
-        1: "text-3xl font-bold text-stone-800 mb-6 mt-8",
-        2: "text-2xl font-semibold text-stone-800 mb-4 mt-6",
-        3: "text-xl font-medium text-stone-800 mb-3 mt-4",
-        4: "text-lg font-medium text-stone-800 mb-2 mt-3",
-      };
-
-      return `<h${level} id="${id}" class="${
-        headingClasses[level] || "text-lg font-medium text-stone-800 mb-2 mt-3"
-      }">${processedText}</h${level}>`;
-    };
-
-    // Custom renderer for footnotes to ensure proper reference anchors
-    renderer.footnote_ref = function (token) {
-      const id = token.id;
-      return `<a href="#footnote-${id}" id="footnote-ref-${id}" class="footnote-ref">[${id}]</a>`;
-    };
-
-    marked.setOptions({
-      renderer,
-      gfm: true,
-      tables: true,
-      breaks: false,
-      pedantic: false,
-      sanitize: false,
-      smartypants: false,
     });
 
     // Function to extract table of contents from headings
