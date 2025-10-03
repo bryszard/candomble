@@ -4,6 +4,19 @@ global.WritableStream = require("stream/web").WritableStream;
 global.TransformStream = require("stream/web").TransformStream;
 global.fetch = require("undici").fetch;
 
+// File API polyfill
+if (typeof global.File === 'undefined') {
+  global.File = class File {
+    constructor(chunks, filename, options = {}) {
+      this.name = filename;
+      this.size = chunks.reduce((acc, chunk) => acc + chunk.length, 0);
+      this.type = options.type || '';
+      this.lastModified = options.lastModified || Date.now();
+      this.chunks = chunks;
+    }
+  };
+}
+
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
