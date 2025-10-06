@@ -294,6 +294,17 @@ async function build() {
       });
     }
 
+    // Copy SEO files to dist
+    console.log("🔍 Copying SEO files...");
+    if (fs.existsSync("robots.txt")) {
+      fs.copyFileSync("robots.txt", "dist/robots.txt");
+      console.log("✅ robots.txt copied");
+    }
+    if (fs.existsSync("sitemap.xml")) {
+      fs.copyFileSync("sitemap.xml", "dist/sitemap.xml");
+      console.log("✅ sitemap.xml copied");
+    }
+
     // Write the final HTML
     console.log("💾 Writing final HTML...");
     const finalHTML = $.html();

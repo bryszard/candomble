@@ -1,0 +1,10 @@
+# robots.txt for candomble.pl
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://candomble.pl/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
